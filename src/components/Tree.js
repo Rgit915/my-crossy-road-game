@@ -26,6 +26,8 @@ export function Tree(tileIndex, height) {
     })
   );
   crown.position.z = height / 2 + 20; // Position the crown above the trunk
+  crown.castShadow = true;
+  crown.receiveShadow = true;
   tree.add(crown); // Add the crown to the tree group
 
   return tree; // Return the complete tree object

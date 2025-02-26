@@ -18,6 +18,8 @@ export function Truck(initialTileIndex, direction, color) {
   );
   cargo.position.x = -15; // Position the cargo part
   cargo.position.z = 15; // Position it above the ground
+  cargo.castShadow = true; // Apply the shadow to the cargo object
+  cargo.receiveShadow = true; // Receive the shadow from the cargo object
   truck.add(cargo); // Add the cargo to the truck group
 
   // Create the cabin (driver's area) of the truck
@@ -27,6 +29,8 @@ export function Truck(initialTileIndex, direction, color) {
   );
   cabin.position.x = 35; // Position the cabin relative to the cargo
   cabin.position.z = 20; // Position it above the ground
+  cabin.castShadow = true; // Apply shadow to the cabin object
+  cabin.receiveShadow = true; // Receive shadow from the cabin object
   truck.add(cabin); // Add the cabin to the truck group
 
   // Create and position the truck wheels using the Wheel component

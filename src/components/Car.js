@@ -16,6 +16,8 @@ export function Car(initialTileIndex, direction, color) {
     new THREE.MeshLambertMaterial({ color, flatShading: true }) // Material for the body
   );
   main.position.z = 12; // Position the body slightly above the ground
+  main.castShadow = true;
+  main.receiveShadow = true; // Enable shadows for the car body
   car.add(main);
 
   // Create the cabin part of the car (the area where passengers sit)
@@ -28,6 +30,8 @@ export function Car(initialTileIndex, direction, color) {
   );
   cabin.position.x = -6; // Position the cabin slightly inside the car body
   cabin.position.z = 25.5; // Raise the cabin above the car's base
+  cabin.castShadow = true;
+  cabin.receiveShadow = true; // Enable shadows for the cabin area
   car.add(cabin);
 
   // Add front and back wheels to the car

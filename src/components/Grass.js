@@ -12,6 +12,7 @@ export function Grass(rowIndex) {
     new THREE.MeshLambertMaterial({ color: 0xbaf45 }) // Material for the grass (light green)
   );
   foundation.position.z = 1.5; // Position the grass slightly above the ground
+  foundation.receiveShadow = true;
   grass.add(foundation); // Add the grass foundation to the grass group
 
   return grass; // Return the complete grass object

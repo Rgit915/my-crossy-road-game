@@ -11,6 +11,8 @@ export function Road(rowIndex) {
     new THREE.PlaneGeometry(tilesPerRow * tileSize, tileSize), // Road dimensions
     new THREE.MeshLambertMaterial({ color: 0x454a59 }) // Material for the road (grayish color)
   );
+
+  foundation.receiveShadow = true;
   road.add(foundation); // Add the road foundation to the road group
 
   return road; // Return the complete road object
